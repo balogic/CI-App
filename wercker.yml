@@ -21,5 +21,7 @@ build:
     # Read more about steps on our dev center:
     # http://devcenter.wercker.com/docs/steps/index.html
     steps:
-        - bundle install
-        - bundle exec rake test
+        - bundle-install
+        - script:
+            name: Run Tests
+            code: bundle exec rake tests
