@@ -23,5 +23,10 @@ build:
     steps:
         - bundle-install
         - script:
+            name: install node
+            code: |-
+                curl -sL https://deb.nodesource.com/setup_0.12 | bash -
+                    apt-get install -y nodejs
+        - script:
             name: Run Tests
             code: bundle exec rake tests
